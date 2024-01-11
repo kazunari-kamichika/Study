@@ -1,11 +1,10 @@
 body{
     width: 400px;
+    margin: 0 auto;
 
 }
 .wrapper{
     width: 400px;
-    margin: 0 auto;
-
   
 }
 .bg-white {
