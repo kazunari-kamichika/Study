@@ -9,8 +9,8 @@ public class Task2_15 {
 	public static void main(String[] args) {
 		
 		//問2
-		Bike bike1 = new Bike("run");
-		Bike bike2 = new Bike("stop");
+		Bike bike1 = new Bike("赤");
+		Bike bike2 = new Bike("青");
 		
 		bike1.run();
 		System.out.println("car1は" + bike1.color + "色で" + bike1.type + "タイプです。 現在" + bike1.check());
