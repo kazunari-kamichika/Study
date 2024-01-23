@@ -9,8 +9,8 @@ public class Task2_15 {
 	public static void main(String[] args) {
 		
 		//問2
-		Bike bike1 = new Bike("赤");
-		Bike bike2 = new Bike("青");
+		Bike bike1 = new Bike(red);
+		Bike bike2 = new Bike(blue,"700cc");
 		
 		bike1.run();
 		System.out.println("car1は" + bike1.color + "色で" + bike1.type + "タイプです。 現在" + bike1.check());
@@ -19,8 +19,7 @@ public class Task2_15 {
 	}
 }
 
-class Bike {		
-	
+class Bike {
 	String color;
 	String type;
 	Boolean state;
