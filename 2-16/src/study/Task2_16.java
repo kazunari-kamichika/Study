@@ -19,9 +19,9 @@ public class Task2_16 {
         int[] arr = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
         
 
-	        for(int n =0; n <arr.length; n++) {
-	        	if(arr[n]%2!=0) {
-	        		System.out.println(arr[n] + "は奇数です。");
+	        for(int num =0; num <arr.length; num++) {
+	        	if(arr[num]%2!=0) {
+	        		System.out.println(arr[num] + "は奇数です。");
 	        		
 	        	}
 	    
