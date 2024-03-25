@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+<head
+  th:replace="common/head :: head_fragment(title = '選手情報詳細', scripts = ~{::script}, links = ~{::link})"></head>
+<body>
+  <div class="container">
+    <h1 style="background: #fff8dc; box-shadow: #fff8dc 0 0 10px 10px; margin:10px; font-size: 100%; padding: 20px;"><font size="10">選手情報詳細</font></h1>
+    <div th:object="${player}">
+      <div class="row mx-md-n5">
+        <div class="col-2 pt-3 border bg-light">名前</div>
+        <div class="col pt-3 border">
+          <p th:text="*{name}"></p>
+        </div>
+      </div>
+       <div class="row mx-md-n5">
+        <div class="col-2 pt-3 border bg-light">学校名</div>
+        <div class="col pt-3 border">
+          <p th:text="*{school}"></p>
+        </div>
+      </div>
+       <div class="row mx-md-n5">
+        <div class="col-2 pt-3 border bg-light">部活</div>
+        <div class="col pt-3 border">
+          <p th:text="*{club}"></p>
+        </div>
+      </div>
+       <div class="row mx-md-n5">
+        <div class="col-2 pt-3 border bg-light">種目（ポジション）</div>
+        <div class="col pt-3 border">
+          <p th:text="*{sports_event}"></p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="text-center">
+      <a th:href="@{/player/{id}/edit(id=*{id})}" class="btn btn-warning" >　編集　</a>
+      <a th:href="@{/player/{id}/delete(id=*{id})}" class="btn btn-secondary">　削除　</a>
+      <a href="/player/list" class="btn btn-danger">一覧に戻る</a>
+    </div>
+  </div>
+</body>
+</html>
