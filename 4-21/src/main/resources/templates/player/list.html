@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: head_fragment(title = '選手情報一覧', scripts = ~{::script}, links = ~{::link})"></head>
+<body>
+  <div class="container">
+    <h1 style="background: #fceff2; box-shadow: #fceff2 0 0 10px 10px; margin:10px; font-size: 100%; padding: 20px;"><font size="10">選手情報一覧</font></h1>
+    <div class="float-end">
+      <a th:href="@{/player/add}" class="btn btn-danger btn-lg">★新規登録はこちら★</a>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>学校名</th>
+          <th>部活</th>
+          <th>種目（ポジション）</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="player : ${playerlist}" th:object="${player}" class="align-middle">
+          <td th:text="*{id}"></td>
+          <td th:text="*{name}"></td>
+          <td th:text="*{school}"></td>
+          <td th:text="*{club}"></td>
+          <td th:text="*{sports_event}"></td>
+          <td><a th:href="@{/player/{id}(id=*{id})}" class="btn btn-secondary">詳細</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
